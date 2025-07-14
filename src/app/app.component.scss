@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Leckerli+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap");
+
+.root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;
+  background-color: #fff;
+
+  .name {
+    font-size: clamp(3rem, 4vw, 4rem);
+    font-family: "Doto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-variation-settings: "ROND" 0;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    word-spacing: 0.1em;
+    color: #222;
+    text-shadow: 0.03em 0.03em 0 rgba(0, 0, 0, 0.15),
+      0.06em 0.06em 0 rgba(255, 255, 255, 0.1);
+    text-align: center;
+    margin: 0px;
+  }
+  .welcome {
+    font-family: "Bitcount Grid Double", system-ui, sans-serif;
+    font-weight: 400;
+    font-size: xx-large;
+    color: #333;
+    text-align: center;
+  }
+  .music {
+    width: 40vw;
+
+    @media only screen and (max-width: 768px) {
+      width: 80vw;
+      margin: 0 auto;
+      min-width: 280px;
+    }
+
+    @media only screen and (max-width: 400px) {
+      width: 90vw;
+    }
+  }
+
+  .icon {
+    .medium {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      width: 15vw;
+
+      .icon-container {
+        cursor: pointer;
+
+        fa-icon {
+          font-size: 32px;
+          color: #222;
+          border: 1px dotted black;
+          padding: 10px;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        &:hover {
+          transform: rotate3d(1, 1, 0, 45deg);
+          transition: 1s;
+        }
+      }
+
+      @media only screen and (max-width: 400px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 50vw;
+      }
+      @media only screen and (max-width: 768px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 50vw;
+      }
+    }
+  }
+}
